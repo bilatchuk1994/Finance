@@ -100,7 +100,7 @@
         <img src="img/team-divider.svg" alt="">
       </div>
       <div class="pagination">
-        <a href="" ><img src="img/p-prev.svg" alt=""></a>
+        <a href="" ><img class="svg" src="img/p-prev.svg" alt=""></a>
         <ul>
           <li><a href="">1</a></li>
           <li><a class="active" href="">2</a></li>
@@ -108,7 +108,7 @@
           <li><a href="">4</a></li>
           <li><a href="">5</a></li>
         </ul>
-        <a href=""><img src="img/p-next.svg" alt=""></a>
+        <a href=""><img class="svg" src="img/p-next.svg" alt=""></a>
       </div>
       </div>
     </div>

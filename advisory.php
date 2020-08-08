@@ -18,7 +18,21 @@
     <div class="row">
     	<div class="col-lg-12">
     		<div class="top-banner object-fit">
-    		<img src="img/advisor.1.jpg" alt="">
+          <div class="banner-sld owl-carousel">
+                    <div class="item object-fit">
+          <img src="img/advisor.1.jpg" alt="">
+        </div>
+        <div class="item object-fit">
+          <img src="img/Group.jpg" alt="">
+        </div>
+        
+        <div class="item object-fit">
+          <img src="img/Group.jpg" alt="">
+        </div>
+        <div class="item object-fit">
+          <img src="img/advisor.1.jpg" alt="">
+        </div>
+      </div>
     		 <div class="banner-text">
         <h5>New investors entering the market for the first time or clients in challenging circumstances need rational and creative advice of experienced professionals on a broad array of brokerage-investment issues.</h5>
         <div class="flex-center">

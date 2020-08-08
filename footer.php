@@ -47,8 +47,8 @@
 	<![endif]-->
 	<script src="libs/jquery/jquery-1.11.1.min.js"></script>
 	<script src="//cdn.jsdelivr.net/npm/jquery.marquee@1.5.0/jquery.marquee.min.js" type="text/javascript"></script>
+	<script src="libs/fancybox/jquery.fancybox.min.js"></script>
 	<script src="libs/owl-carousel/owl.carousel.min.js"></script>
-	<!-- <script src="js/query.marquee.js"></script> -->
 	<script src="js/common.js"></script>
 	<!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
 	<!-- Google Analytics counter --><!-- /Google Analytics counter -->

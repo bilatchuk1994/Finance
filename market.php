@@ -16,7 +16,22 @@
     <div class="row">
     	<div class="col-lg-12">
     		<div class="top-banner object-fit">
-    		<img src="img/market-1.jpg" alt="">
+          <div class="banner-sld owl-carousel">
+                    <div class="item object-fit">
+        <img src="img/market-1.jpg" alt="">
+        </div>
+        <div class="item object-fit">
+          <img src="img/Group.jpg" alt="">
+        </div>
+        
+        <div class="item object-fit">
+          <img src="img/Group.jpg" alt="">
+        </div>
+        <div class="item object-fit">
+          <img src="img/advisor.1.jpg" alt="">
+        </div>
+      </div>
+    		
     		<div class="banner-text">
         <h5>Public companies, especially junior issuers must maintain liquid, steady markets for their traded securities.</h5>
         <div class="flex-center">

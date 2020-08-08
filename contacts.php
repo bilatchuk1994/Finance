@@ -82,7 +82,7 @@
     center: {lat: 41.7234198, lng: 46.4139318}, 
   });
 
-  var image = 'img/marker.svg';
+  var image = 'img/marker.png';
   var beachMarker = new google.maps.Marker({
     position: {lat: 41.7234198, lng: 46.4139318}, 
     map: map,

@@ -22,7 +22,22 @@
     <div class="row">
     	<div class="col-lg-12">
     		<div class="top-banner object-fit">
-    		<img src="img/karyera-1.jpg" alt="">
+          <div class="banner-sld owl-carousel">
+                    <div class="item object-fit">
+         <img src="img/karyera-1.jpg" alt="">
+        </div>
+        <div class="item object-fit">
+          <img src="img/Group.jpg" alt="">
+        </div>
+        
+        <div class="item object-fit">
+          <img src="img/Group.jpg" alt="">
+        </div>
+        <div class="item object-fit">
+          <img src="img/advisor.1.jpg" alt="">
+        </div>
+      </div>
+    		
     		<div class="banner-text">
         <h5>AzFinance İnvestisiya Şirkəti” QSC Azərbaycanda ən yüksək standartlarda investisiya xidmətləri göstərmək üçün 2014-cü ildə yaradılmışdır.</h5>
         <div class="flex-center">

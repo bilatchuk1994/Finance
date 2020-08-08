@@ -29,11 +29,11 @@
 	<meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
 	<link rel="stylesheet" href="libs/bootstrap/bootstrap-grid.min.css" />
+	<link rel="stylesheet" href="libs/fancybox/jquery.fancybox.min.css" />
 	<link rel="stylesheet" href="libs/owl-carousel/owl.carousel.css" />
 	<link rel="stylesheet" href="css/animate.min.css" />
 	<link rel="stylesheet" href="css/main.css" />
 	<link rel="stylesheet" href="css/media.css" />
-	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </head>
 <body>
 
@@ -147,8 +147,10 @@
 				</nav>
 			</div>
 		 <div class="col-lg-3">
-		 	  <div class="d-block d-lg-block">
+		 	  <div class="d-block d-lg-none">
+		 	  	<div class="header-line">
 		 	  	<img src="img/menu-line.svg" alt="">
+		 	  </div>
 		 	  </div>
 				<div class="header-group">
 					<div>
@@ -185,7 +187,6 @@
 				<ul class="lang-menu">
 					<li><a class="flex-center active" href="">eng</a></li>
 					<li><a class="flex-center" href="">aze</a></li>
-					<li><a class="flex-center" href="">rus</a></li>
 				</ul>
 				</div>
 			</div>

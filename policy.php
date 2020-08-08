@@ -19,7 +19,22 @@
       <div class="row">
           <div class="col-lg-12">
           	<div class="top-banner object-fit">
-              <img src="img/Group.jpg" alt="">
+              <div class="banner-sld owl-carousel">
+                    <div class="item object-fit">
+        <img src="img/Group.jpg" alt="">
+        </div>
+        <div class="item object-fit">
+          <img src="img/Group.jpg" alt="">
+        </div>
+        
+        <div class="item object-fit">
+          <img src="img/Group.jpg" alt="">
+        </div>
+        <div class="item object-fit">
+          <img src="img/advisor.1.jpg" alt="">
+        </div>
+      </div>
+              
               <div class="banner-text">
         <h5>Slogan. Or info about Company. “AzFinance İnvestisiya Şirkəti” QSC Azərbaycanda ən yüksək standartlarda investisiya xidmətləri göstərmək üçün 2014-cü ildə yaradılmışdır.</h5>
         <div class="flex-center">
@@ -51,25 +66,25 @@
       <div class="row policy-row">
           <div class="col-lg-4 col-sm-6">
               <div class="license">
-                <div class="license-img">
+                <a href="img/policy-1.jpg" data-fancybox="gallery" class="license-img">
                   <img src="img/policy-1.jpg" alt="">
-                  </div>
+                  </a>
                   <p>License for Investment services</p>
               </div>
           </div>
            <div class="col-lg-4 col-sm-6">
               <div class="license">
-                <div class="license-img">
+                <a href="img/policy-1.jpg" data-fancybox="gallery" class="license-img">
                   <img src="img/policy-1.jpg" alt="">
-                </div>
+                </a>
                   <p>License for Brokerage</p>
               </div>
           </div>
            <div class="col-lg-4 col-sm-6">
               <div class="license">
-                <div class="license-img">
+                <a href="img/policy-1.jpg" data-fancybox="gallery" class="license-img">
                   <img src="img/policy-1.jpg" alt="">
-                </div>
+                </a>
                   <p>License for Dealer</p>
               </div>
           </div>
@@ -95,17 +110,17 @@
       <div class="row policy-row">
            <div class="col-lg-4 col-sm-6">
               <div class="license">
-                <div class="license-img">
+                <a href="img/policy-1.jpg" data-fancybox="gallery-p" class="license-img">
                   <img src="img/policy-1.jpg" alt="">
-                </div>
+                </a>
                   <p>License for Asset Management</p>
               </div>
           </div>
            <div class="col-lg-4 col-sm-6">
               <div class="license">
-                <div class="license-img">
+                <a href="img/policy-2.jpg" data-fancybox="gallery-p" class="license-img">
                   <img src="img/policy-2.jpg" alt="">
-                </div>
+                </a>
                   <p>Membership of Baku Stock Exchange</p>
               </div>
           </div>

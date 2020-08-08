@@ -3,12 +3,12 @@
 //* Load
 jQuery(window).bind('load', function() {
     damaxStickyHeader();
-    priceMatchHeight();
+    topHeight();
 });
 
 //* Resize
 jQuery(window).resize(function() {
-    priceMatchHeight();
+    topHeight();
 });
 
 //* Scroll
@@ -20,19 +20,21 @@ jQuery(window).scroll(function() {
 function damaxRegister() {
     damaxToggleMenu();
     damaxStickyHeader();
+    topHeight();
 }
 damaxRegister();
 
 
-//** BEG CUSTOM FUNCTIONS **//s
+//** BEG CUSTOM FUNCTIONS **//
 
 
-function priceMatchHeight() {
-    // jQuery(function() {
-    //     jQuery(".review-sld .item").each(function(){
-    //         jQuery('.patient-item').matchHeight();
-    //     });
-    // });
+
+function topHeight() {
+    if (jQuery(window).width() < 992 && jQuery(window).height() > 600) {
+  let vh = window.innerHeight * 0.01;
+  $('.top-home').css("height", vh * 100);
+  $('.top-home .item').css("height", vh * 100);
+}
 }
 
 
@@ -48,6 +50,17 @@ function damaxStickyHeader() {
     } else {
         $('.home .header').removeClass("sticky_header");
     }
+
+
+   if (jQuery(window).width() < 992) {
+
+    if ($(window).scrollTop() > 0) {
+        $('.home .header').addClass("sticky_header");
+    } else {
+        $('.home .header').removeClass("sticky_header");
+    }
+
+}
 
 
 }
@@ -68,13 +81,6 @@ function damaxToggleMenu() {
     }
     });
 
-    //  $(".nav-menu ul li.has-child").click(function(e) {
-    //     if (jQuery(window).width() < 992) {
-    //     $(".nav-menu ul li .dropdown").removeClass("show");
-    //     $(this).siblings(".dropdown").slideDown(200);
-    // }
-    // });
-
 
 $('.nav-menu ul li.has-child').on('click', function(){
   event.preventDefault();
@@ -94,22 +100,40 @@ $('.nav-menu ul li.has-child').on('click', function(){
 
 
 
+ $('[data-target-tab]').each(function () {
 
-// $('.popup-btn').magnificPopup({
-//     type: 'inline',
-//     duration: 400,
-//     removalDelay: 500,
-//     callbacks: {
-//         beforeOpen: function() {
-//          this.st.mainClass = this.st.el.attr('data-effect');
-//      }
-//  },
-//  midClick: true
-// });
+        const $this = $(this);
+        const $target = $this.data('target-tab');
 
-// $('.close-popup').click(function(event) {
-//     $.magnificPopup.close();
-// });
+        if ($this.data('trigger')) {
+            $this.hover(function () {
+                tab();
+            });
+        }
+        else {
+            $this.click(function () {
+                tab();
+            });
+        }
+
+        function tab() {
+
+            var $targetTab = $('[data-target-tab="' + $target + '"]');
+            var $tab = $('[data-tab="' + $target + '"]');
+
+            $targetTab.attr('aria-expanded', true)
+                .attr('aria-selected', true)
+                .parent('li').addClass('active')
+                .siblings().removeClass('active')
+                .find('[data-target-tab]')
+                .attr('aria-selected', false)
+                .attr('aria-expanded', false);
+
+            $tab.addClass('active').siblings('.tab-panel').removeClass('active')
+        }
+
+    });
+
 
 
 
@@ -131,13 +155,15 @@ $('.marquee2').marquee({
 
 
 
+
+
 // jQuery(".phone-input").inputmask({"mask": "8 (999) 999-99-99"});
 
 
 var slider = $(".top-sld");
 
 slider.owlCarousel({
-    dots: false,
+    dots: true,
     nav: true,
     items: 1,
     loop: true,
@@ -152,28 +178,89 @@ slider.owlCarousel({
 });
 
 
+var banslider = $(".banner-sld");
 
-
-$('img.svg').each((i, e) => {
-    const $img = $(e);
-    const imgID = $img.attr('id');
-    const imgClass = $img.attr('class');
-    const imgURL = $img.attr('src');
-    $.get(imgURL, (data) => {
-        let $svg = $(data).find('svg');
-        if (typeof imgID !== 'undefined') {
-            $svg = $svg.attr('id', imgID);
-        }
-        if (typeof imgClass !== 'undefined') {
-            $svg = $svg.attr('class', `${imgClass}replaced-svg`);
-        }
-        $svg = $svg.removeAttr('xmlns:a');
-        if (!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
-            $svg.attr(`viewBox 0 0  ${$svg.attr('height')} ${$svg.attr('width')}`);
-        }
-        $img.replaceWith($svg);
-    }, 'xml');
+banslider.owlCarousel({
+    dots: false,
+    nav: false,
+    items: 1,
+    loop: true,
+    margin: 50,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    animateOut: 'fadeOut',
+    autoplayHoverPause: true,
+    smartSpeed: 450,
+    mouseDrag: false,
 });
+
+
+
+var offslider = $(".offer-sld");
+
+offslider.owlCarousel({
+    dots: false,
+    nav: true,
+    items: 1,
+    loop: false,
+    margin: 10,
+    navText: ["<img class='svg' src='img/o-back.svg' alt=''>", "<img class='svg' src='img/o-next.svg' alt=''>" ],
+});
+
+
+ $("#btn-to-bottom").on('click', function(event) {
+        if (this.hash !== "") {
+            event.preventDefault();
+
+            var hash = this.hash;
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800, function(){
+                window.location.hash = hash;
+            });
+        } 
+    });
+
+
+$('[data-fancybox]').fancybox({
+    toolbar  : true,
+     loop: true,
+     buttons: [
+    "zoom",
+    "download",
+    "close"
+  ],
+})
+
+
+jQuery('img.svg').each(function(){
+            var $img = jQuery(this);
+            var imgID = $img.attr('id');
+            var imgClass = $img.attr('class');
+            var imgURL = $img.attr('src');
+
+            jQuery.get(imgURL, function(data) {
+                // Get the SVG tag, ignore the rest
+                var $svg = jQuery(data).find('svg');
+
+                // Add replaced image's ID to the new SVG
+                if(typeof imgID !== 'undefined') {
+                    $svg = $svg.attr('id', imgID);
+                }
+                // Add replaced image's classes to the new SVG
+                if(typeof imgClass !== 'undefined') {
+                    $svg = $svg.attr('class', imgClass+' replaced-svg');
+                }
+
+                // Remove any invalid XML tags as per http://validator.w3.org
+                $svg = $svg.removeAttr('xmlns:a');
+
+                // Replace image with new SVG
+                $img.replaceWith($svg);
+
+            }, 'xml');
+
+        });
 
 // var wow = new WOW({
 //     boxClass: "wow",
