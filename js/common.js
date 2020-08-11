@@ -171,8 +171,6 @@ slider.owlCarousel({
     autoplay: true,
     autoplayTimeout: 4000,
     animateOut: 'fadeOut',
-    autoplayHoverPause: true,
-    smartSpeed: 450,
     mouseDrag: false,
     navText: ["<img class='svg' src='img/back.svg' alt=''>", "<img class='svg' src='img/next.svg' alt=''>" ],
 });
@@ -189,8 +187,6 @@ banslider.owlCarousel({
     autoplay: true,
     autoplayTimeout: 3000,
     animateOut: 'fadeOut',
-    autoplayHoverPause: true,
-    smartSpeed: 450,
     mouseDrag: false,
 });
 

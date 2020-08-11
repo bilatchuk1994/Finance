@@ -185,8 +185,8 @@
 					</ul>
 				</div>
 				<ul class="lang-menu">
-					<li><a class="flex-center active" href="">eng</a></li>
-					<li><a class="flex-center" href="">aze</a></li>
+					<li><a class="flex-center active" href="">aze</a></li>
+					<li><a class="flex-center" href="">eng</a></li>
 				</ul>
 				</div>
 			</div>
